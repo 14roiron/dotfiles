@@ -9,9 +9,9 @@ Installation
 ------------
 Your first step is to clone this repository:
 
-    git clone https://github.com/hamvocke/dotfiles.git ~/.dotfiles
+    git clone https://github.com/14roiron/dotfiles.git ~/.dotfiles
 
-### Manual Installation
+### Manual Installation (should not be used)
 Create symbolic links for the configurations you want to use, e.g.:
 
     ln -s ~/.dotfiles/vim/.vimrc ~/.vimrc
@@ -34,3 +34,8 @@ Then simply use stow to install the dotfiles you want to use:
 Use base16 colors
 -----------------
 To get the most out of my dotfiles I recommend installing [base16-shell](https://github.com/chriskempson/base16-shell) on your system. This will allow you to have unified colors in all your command line applications. If you see that some colors are off when using my setup, installing base16-shell is most likely the way to fix it.
+
+Yroiron adjustement
+------------------
+
+you may need to install specific fonts for the ooh my zsh thema
