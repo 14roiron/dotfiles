@@ -40,7 +40,7 @@ ZSH_THEME="agnoster"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git battery command-not-found last-working-dir screen archlinux themes)
+plugins=(git battery command-not-found last-working-dir z vundle history-substring-search tmux) 
 
 source $ZSH/oh-my-zsh.sh
 
@@ -56,21 +56,8 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 # Aliases
 #------------------------------------------------------
 #alias tmux='tmux -2'
-alias serve='python -m SimpleHTTPServer'
+#alias serve='python -m SimpleHTTPServer'
 
 ### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+# export PATH="/usr/local/heroku/bin:$PATH"
 
-# add npm packages directory
-NPM_PACKAGES="${HOME}/.npm-packages"
-NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
-
-PATH="$NPM_PACKAGES/bin:$PATH"
-# Unset manpath so we can inherit from /etc/manpath via the `manpath` command
-unset MANPATH 
-
-# delete if you already modified MANPATH elsewhere in your config
-MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
-
-# rubygems
-PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
