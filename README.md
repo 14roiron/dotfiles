@@ -1,6 +1,7 @@
 dotfiles
 ========
 
+
 A collection of my personal dotfiles. Here's a little preview of what it can look like:
 
 ![screenshot](screenshot.png)
