@@ -5,8 +5,11 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that soh-my-zsh is loaded.
-ZSH_THEME="agnoster"
+ZSH_THEME="powerlevel9k/powerlevel9k"
 
+if [[ -r ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh  ]]; then
+    source ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -41,12 +44,15 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git battery command-not-found last-working-dir z vundle history-substring-search tmux zsh-autosuggestions zsh-syntax-highlighting) 
-
+export TERM="xterm-256color"
+DEFAULT_USER=$(whoami)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
-
+if [ -d "$HOME/.local/bin"  ]; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
 # use 256 color terminal
 export TERM=xterm-256color
 
@@ -60,4 +66,7 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 
 ### Added by the Heroku Toolbelt
 # export PATH="/usr/local/heroku/bin:$PATH"
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir root_indicator rbenv vcs vi_mode)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status load time)
 
+xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape' 

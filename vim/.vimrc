@@ -250,8 +250,14 @@ let g:clang_library_path='/usr/lib/llvm-3.8/lib/libclang.so.1'
 "nnoremap <silent> {Right-Mapping} :TmuxNavigateRight<cr>
 "nnoremap <silent> {Previous-Mapping} :TmuxNavigatePrevious<cr>
 
+set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
 
-
+" Always show statusline
+set laststatus=2
+"
+" " Use 256 colours (Use this setting only if your terminal supports 256
+" colours)
+set t_Co=256"
 
 if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
