@@ -45,7 +45,8 @@ Plugin 'majutsushi/tagbar'
 Plugin 'szw/vim-tags'
 "Plugin 'altercation/vim-colors-solarized'
 Plugin 'chriskempson/base16-vim'
-"
+Plugin 'mileszs/ack.vim'
+Plugin 'sjl/vitality.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -259,7 +260,23 @@ set laststatus=2
 " colours)
 set t_Co=256"
 
+
+" Parametres par defaut pour ack
+ let g:ackprg="ack -H --nocolor --nogroup --column"
+" " Place un marqueur et cherche
+ nmap <leader>j mA:Ack<space>
+" " Place un marqueur et cherche le mot sous le curseur
+ nmap <leader>ja mA:Ack "<C-r>=expand("<cword>")<cr>"
+ nmap <leader>jA mA:Ack "<C-r>=expand("<cWORD>")<cr>"
+
+
+
 if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
 endif
+
+:au FocusLost * :set number
+:au FocusGained * :set relativenumber
+
+
 
