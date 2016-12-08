@@ -43,8 +43,8 @@ Plugin 'itchyny/calendar.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'majutsushi/tagbar'
 Plugin 'szw/vim-tags'
-"Plugin 'altercation/vim-colors-solarized'
-Plugin 'chriskempson/base16-vim'
+Plugin 'altercation/vim-colors-solarized'
+"Plugin 'chriskempson/base16-vim'
 "
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -204,7 +204,8 @@ if has('gui_running')
 else
 		set background=dark
 endif
-colorscheme base16-default-dark
+colorscheme solarized
+"colorscheme base16-default-dark
 " UTF-8 encoding and en_US as default encoding/language
 set encoding=utf8
 
@@ -250,8 +251,9 @@ let g:clang_library_path='/usr/lib/llvm-3.8/lib/libclang.so.1'
 "nnoremap <silent> {Right-Mapping} :TmuxNavigateRight<cr>
 "nnoremap <silent> {Previous-Mapping} :TmuxNavigatePrevious<cr>
 
-set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
 
+"set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
+set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim/
 " Always show statusline
 set laststatus=2
 "

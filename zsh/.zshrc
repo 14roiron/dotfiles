@@ -1,6 +1,7 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
-
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -10,6 +11,10 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 if [[ -r ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh  ]]; then
     source ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 fi
+
+if [[ -r /usr/local/lib/python2.7/site-packages/powerline/bindings/powerline.zsh  ]]; then
+    source /usr/local/lib/python2.7/site-packages/powerline/bindings/powerline.zsh 
+fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -17,7 +22,7 @@ fi
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
-# Comment this out to disable bi-weekly auto-update checks
+#Comment this out to disable bi-weekly auto-update checks
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment to change how often before auto-updates occur? (in days)
@@ -43,7 +48,7 @@ fi
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git battery command-not-found last-working-dir z vundle history-substring-search tmux zsh-autosuggestions zsh-syntax-highlighting) 
+plugins=(git battery command-not-found last-working-dir z vundle history-substring-search tmux bundler osx brew composer common-aliases pip python sudo symfony2 subl zsh-autosuggestions zsh-syntax-highlighting) 
 export TERM="xterm-256color"
 DEFAULT_USER=$(whoami)
 source $ZSH/oh-my-zsh.sh
@@ -70,3 +75,4 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir root_indicator rbenv vcs vi_mode)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status load time)
 
 xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape' 
+
