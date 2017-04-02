@@ -4,7 +4,7 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
+# optionally, if you set this to "random", it'll load a random theme each
 # time that soh-my-zsh is loaded.
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
@@ -48,7 +48,8 @@ fi
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git battery command-not-found last-working-dir z vundle history-substring-search tmux bundler osx brew composer common-aliases pip python sudo symfony2 subl zsh-autosuggestions zsh-syntax-highlighting) 
+plugins=(git battery command-not-found last-working-dir z vundle history-substring-search tmux bundler osx brew composer common-aliases pip python sudo symfony2 subl  zsh-syntax-highlighting zsh-autosuggestions )
+
 export TERM="xterm-256color"
 DEFAULT_USER=$(whoami)
 source $ZSH/oh-my-zsh.sh
@@ -68,6 +69,10 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 #------------------------------------------------------
 #alias tmux='tmux -2'
 #alias serve='python -m SimpleHTTPServer'
+#python alias
+alias pip3='python3 -m pip'
+alias pdb='python -m powerline.bindings.pdb'
+alias pdb3='python3 -m powerline.bindings.pdb'
 
 ### Added by the Heroku Toolbelt
 # export PATH="/usr/local/heroku/bin:$PATH"
@@ -76,3 +81,14 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status load time)
 
 xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape' 
 
+export PATH="/usr/local/sbin:$PATH"
+# The following lines were added by compinstall
+
+zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
+zstyle :compinstall filename '/Users/Yohann/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+export PATH="/usr/local/opt/curl/bin:$PATH"
+ssh-add -A &> /dev/null

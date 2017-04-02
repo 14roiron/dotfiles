@@ -47,6 +47,8 @@ Plugin 'altercation/vim-colors-solarized'
 "Plugin 'chriskempson/base16-vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'sjl/vitality.vim'
+Plugin 'ConradIrwin/vim-bracketed-paste' "automatic move to copy mode when copying only work with new terminal
+Plugin 'jeffkreeftmeijer/vim-numbertoggle' "automatic shift between absolut and relive lines, 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -202,6 +204,10 @@ endif
 let base16colorspace=256  " Access colors present in 256 colorspace
 if has('gui_running')
 	    set background=light
+  	    let s:uname = system("uname")
+        if s:uname == "Darwin\n"
+			set guifont=Inconsolata\ for\ Powerline:h15
+		endif
 else
 		set background=dark
 endif
@@ -280,5 +286,18 @@ endif
 :au FocusLost * :set number
 :au FocusGained * :set relativenumber
 
+au BufNewFile,BufRead *.py
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
+au BufNewFile,BufRead *.js, *.html, *.css
+    \ set tabstop=2
+    \ set softtabstop=2
+    \ set shiftwidth=2
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
-
+ 
