@@ -1,0 +1,5 @@
+Bundle 'ConradIrwin/vim-bracketed-paste'
+Bundle "christoomey/vim-tmux-navigator"
+Bundle "jeffkreeftmeijer/vim-numbertoggle.git"
+Bundle "sjl/vitality.vim"
+
