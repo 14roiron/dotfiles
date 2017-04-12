@@ -2,4 +2,9 @@ Bundle 'ConradIrwin/vim-bracketed-paste'
 Bundle "christoomey/vim-tmux-navigator"
 Bundle "jeffkreeftmeijer/vim-numbertoggle.git"
 Bundle "sjl/vitality.vim"
+Bundle "tpope/vim-obsession.git"
+Bundle "benmills/vimux"
+Bundle "jgdavey/vim-turbux"
+Bundle "ivanov/vim-ipython"
+Bundle "vimux-pyutils"
 
