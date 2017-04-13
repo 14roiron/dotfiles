@@ -93,5 +93,6 @@ compinit
 # End of lines added by compinstall
 export PATH="/usr/local/opt/curl/bin:$PATH"
 ssh-add -A &> /dev/null
+compdef sshrc=ssh
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
