@@ -8,13 +8,13 @@ export LANG=en_US.UTF-8
 # time that soh-my-zsh is loaded.
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
-#if [[ -r ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh  ]]; then
-#    source ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
-#fi
-
-if [[ -r /usr/local/lib/python2.7/site-packages/powerline/bindings/powerline.zsh  ]]; then
-    source /usr/local/lib/python2.7/site-packages/powerline/bindings/powerline.zsh 
+if [[ -r ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh  ]]; then
+    source ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 fi
+
+#if [[ -r /usr/local/lib/python2.7/site-packages/powerline/bindings/powerline.zsh  ]]; then
+#    source /usr/local/lib/python2.7/site-packages/powerline/bindings/powerline.zsh 
+#fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -48,7 +48,7 @@ DISABLE_AUTO_UPDATE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(vi-mode git battery command-not-found last-working-dir z vundle history-substring-search tmux bundler osx brew composer common-aliases pip python sudo symfony2 subl  zsh-syntax-highlighting zsh-autosuggestions  cp mosh)
+plugins=(vi-mode git command-not-found last-working-dir z vundle history-substring-search tmux bundler composer common-aliases pip python sudo zsh-syntax-highlighting zsh-autosuggestions  cp mosh)
 
 export TERM="xterm-256color"
 DEFAULT_USER=$(whoami)
@@ -60,27 +60,19 @@ if [ -d "$HOME/.local/bin"  ]; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 # use 256 color terminal
-export TERM=xterm-256color
+#export TERM=xterm-256color
 
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 #------------------------------------------------------
 # Aliases
 #------------------------------------------------------
-#alias tmux='tmux -2'
-#alias serve='python -m SimpleHTTPServer'
-#python alias
-alias pip3='python3 -m pip'
-alias pdb='python -m powerline.bindings.pdb'
-alias pdb3='python3 -m powerline.bindings.pdb'
-alias pdb3.5='python3.5 -m powerline.bindings.pdb'
 
 ### Added by the Heroku Toolbelt
 # export PATH="/usr/local/heroku/bin:$PATH"
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir root_indicator rbenv vcs vi_mode)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status load time)
 
-xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape' 
 
 export PATH="/usr/local/sbin:$PATH"
 
@@ -92,13 +84,4 @@ zstyle :compinstall filename '/Users/Yohann/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
-export PATH="/usr/local/opt/curl/bin:$PATH"
-ssh-add -A &> /dev/null
-compdef sshrc=ssh
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-alias @django='source /Users/Yohann/@django/bin/activate'
-# pyenv local 3.5.3
-# pyenv install 2.6.9
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"

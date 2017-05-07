@@ -1,2 +1,19 @@
-sh <(curl https://raw.githubusercontent.com/14roiron/spf13-vim/3.0/bootstrap.sh -L)
+sudo apt-get install git curl stow zsh tmux 
+chsh -s /bin/zsh
+autoload -Uz zsh-newuser-install; zsh-newuser-install -f
+cd
+git clone https://github.com/14roiron/dotfiles/ .dotfiles
+cd .dotfiles
+git checkout macv2
+
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting 
+git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions 
+git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+pip install powerline-status
+
+git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9kdd
+cd ~/.dotfile
+stow vim tmux git zsh 
+
+curl https://raw.githubusercontent.com/14roiron/spf13-vim/3.0/bootstrap.sh -L | sh
