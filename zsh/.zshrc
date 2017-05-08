@@ -73,6 +73,7 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 alias pip3='python3 -m pip'
 alias pdb='python -m powerline.bindings.pdb'
 alias pdb3='python3 -m powerline.bindings.pdb'
+alias pdb3.5='python3.5 -m powerline.bindings.pdb'
 
 ### Added by the Heroku Toolbelt
 # export PATH="/usr/local/heroku/bin:$PATH"
@@ -96,3 +97,8 @@ ssh-add -A &> /dev/null
 compdef sshrc=ssh
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+alias @django='source /Users/Yohann/@django/bin/activate'
+# pyenv local 3.5.3
+# pyenv install 2.6.9
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
