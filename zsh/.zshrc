@@ -42,7 +42,7 @@ DISABLE_AUTO_UPDATE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(vi-mode git command-not-found last-working-dir z vundle history-substring-search tmux bundler composer common-aliases pip python sudo zsh-syntax-highlighting zsh-autosuggestions  cp mosh)
+plugins=(vi-mode git command-not-found last-working-dir z vundle history-substring-search tmux bundler common-aliases pip python sudo zsh-syntax-highlighting zsh-autosuggestions  cp mosh)
 
 export TERM="xterm-256color"
 DEFAULT_USER=$(whoami)
