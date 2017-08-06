@@ -1,4 +1,4 @@
-sudo apt-get install git curl stow zsh tmux 
+sudo apt-get install git curl stow zsh tmux vim
 chsh -s /bin/zsh
 autoload -Uz zsh-newuser-install; zsh-newuser-install -f
 cd
