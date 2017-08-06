@@ -4,7 +4,7 @@ autoload -Uz zsh-newuser-install; zsh-newuser-install -f
 cd
 git clone https://github.com/14roiron/dotfiles/ .dotfiles
 cd .dotfiles
-git checkout macv2
+git checkout linux
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting 
