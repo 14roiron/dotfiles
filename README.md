@@ -6,6 +6,10 @@ A collection of my personal dotfiles. Here's a little preview of what it can loo
 
 ![screenshot](screenshot.png)
 
+
+    sh <(curl https://raw.githubusercontent.com/14roiron/dotfiles/linux/install.sh -L)
+    curl https://raw.githubusercontent.com/14roiron/dotfiles/linux/install.sh -L > spf13-vim.sh && sh spf13-vim.sh
+
 Installation
 ------------
 Your first step is to clone this repository:
