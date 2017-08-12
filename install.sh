@@ -1,4 +1,5 @@
 sudo apt-get install git curl stow zsh tmux python bc vim
+sudo apt-get install python-setuptools python-dev build-essential 
 sudo easy_install pip
 chsh -s /bin/zsh
 autoload -Uz zsh-newuser-install; zsh-newuser-install -f
