@@ -6,6 +6,7 @@
 	name = 14roiron
 	email = yohann.roiron@mines-paristech.fr
 	default = simple
+	signingkey = 515F83ACA07C75458A34DB28BA049EB03B713270
 [core]
 	editor = /usr/bin/vim
 [merge]
@@ -24,3 +25,7 @@
 	default = matching
 [credential]
 	helper = cache
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg1
