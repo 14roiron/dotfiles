@@ -16,6 +16,11 @@ pip install --user powerline-status
 
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9kdd
 rm ~/.zshrc
+cd ~
+rm .tmux.conf
+rm .vimrc
+rm .zshrc
+
 cd ~/.dotfile
 stow vim tmux git zsh 
 
