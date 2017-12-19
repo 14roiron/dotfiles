@@ -94,6 +94,7 @@ compinit
 # End of lines added by compinstall
 export PATH="/usr/local/opt/curl/bin:$PATH"
 ssh-add -A &> /dev/null
+
 compdef sshrc=ssh
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
@@ -102,3 +103,6 @@ alias @django='source /Users/Yohann/@django/bin/activate'
 # pyenv install 2.6.9
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+
+export PATH="~/.cargo/bin:$PATH"

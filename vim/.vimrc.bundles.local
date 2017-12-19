@@ -8,3 +8,8 @@ Bundle "tpope/vim-obsession.git"
 " Bundle "ivanov/vim-ipython"
 " Bundle "vimux-pyutils"
 " Bundle "julienr/vim-cellmode"
+Bundle 'racer-rust/vim-racer'
+Bundle 'chazy/cscope_maps'
+Bundle 'prabirshrestha/async.vim'
+Bundle 'prabirshrestha/asyncomplete.vim'
+Bundle 'wellle/tmux-complete.vim'
