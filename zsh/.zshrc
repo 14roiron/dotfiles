@@ -85,3 +85,4 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+tmux -L tmux
