@@ -4,7 +4,7 @@ sudo easy_install pip
 chsh -s /bin/zsh
 autoload -Uz zsh-newuser-install; zsh-newuser-install -f
 cd
-git clone git@github.com:14roiron/dotfiles.git .dotfiles
+git clone https://github.com/14roiron/dotfiles.git .dotfiles
 cd .dotfiles
 git checkout linux
 
