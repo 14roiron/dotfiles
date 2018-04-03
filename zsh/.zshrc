@@ -106,3 +106,11 @@ eval "$(pyenv virtualenv-init -)"
 
 
 export PATH="~/.cargo/bin:$PATH"
+
+# added by Miniconda2 installer
+export PATH="/Users/Yohann/miniconda2/bin:$PATH"
+
+# added by Miniconda3 installer
+export PATH="/Users/Yohann/miniconda3/bin:$PATH"
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+export PATH="/usr/local/opt/qt/bin:$PATH"
