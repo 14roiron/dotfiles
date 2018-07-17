@@ -75,6 +75,7 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir root_indicator rbenv vcs vi_mode)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status load time)
 
 
+export LD_LIBRARY_PATH=/opt/intel/lib/intel64:/opt/intel/mkl/lib/intel64:${LD_LIBRARY_PATH}
 
 # The following lines were added by compinstall
 
@@ -85,4 +86,4 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-tmux -L tmux
+if [ "$TMUX" = "" ]; then tmux attach; fi
