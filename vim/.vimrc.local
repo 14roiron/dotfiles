@@ -2,8 +2,7 @@ set wrap
 
 
 let g:spellfile_URL = 'http://ftp.vim.org/vim/runtime/spell'
-
-
+set tags=./tags;
 "vim ack binding
 " Parametres par defaut pour ack
 let g:ackprg="ack -H --nocolor --nogroup --column"

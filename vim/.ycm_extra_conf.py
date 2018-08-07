@@ -13,7 +13,7 @@ BASE_FLAGS = [
         '-fexceptions',
         '-ferror-limit=10000',
         '-DNDEBUG',
-        '-std=c++1z',
+        '-std=c++11',
         '-xc++',
         '-I/usr/lib/',
         '-I/usr/include/'
@@ -44,11 +44,14 @@ HEADER_DIRECTORIES = [
         'include'
         ]
 
-BUILD_DIRECTORY = 'build';
+
+BUILD_DIRECTORY = 'build'
+
 
 def IsHeaderFile(filename):
     extension = os.path.splitext(filename)[1]
     return extension in HEADER_EXTENSIONS
+
 
 def GetCompilationInfoForFile(database, filename):
     if IsHeaderFile(filename):
@@ -71,6 +74,7 @@ def GetCompilationInfoForFile(database, filename):
         return None
     return database.GetCompilationInfoForFile(filename)
 
+
 def FindNearest(path, target, build_folder=None):
     candidate = os.path.join(path, target)
     if(os.path.isfile(candidate) or os.path.isdir(candidate)):
@@ -85,9 +89,10 @@ def FindNearest(path, target, build_folder=None):
         candidate = os.path.join(parent, build_folder, target)
         if(os.path.isfile(candidate) or os.path.isdir(candidate)):
             logging.info("Found nearest " + target + " in build folder at " + candidate)
-            return candidate;
+            return candidate
 
     return FindNearest(parent, target, build_folder)
+
 
 def MakeRelativePathsInFlagsAbsolute(flags, working_directory):
     if not working_directory:
@@ -160,7 +165,7 @@ def FlagsForCompilationDatabase(root, filename):
         return None
 
 def FlagsForFile(filename):
-    root = os.path.realpath(filename);
+    root = os.path.realpath(filename)
     compilation_db_flags = FlagsForCompilationDatabase(root, filename)
     if compilation_db_flags:
         final_flags = compilation_db_flags
