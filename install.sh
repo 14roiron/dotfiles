@@ -14,12 +14,18 @@ git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 pip install --user powerline-status
 
+
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9kdd
 rm ~/.zshrc
 cd ~
 rm .tmux.conf
 rm .vimrc
 rm .zshrc
+
+git clone https://github.com/snare/voltron ~/.voltron
+cd ~/.voltron
+./install.sh
+
 
 cd ~/.dotfile
 stow vim tmux git zsh 

@@ -87,3 +87,4 @@ compinit
 # End of lines added by compinstall
 
 if [ "$TMUX" = "" ]; then tmux attach; fi
+source /opt/ros/kinetic/setup.zsh

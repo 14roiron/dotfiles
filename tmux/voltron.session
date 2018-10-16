@@ -14,8 +14,8 @@ splitw -h -p 60
 
 # Open Voltron
 send -t 0 C-z 'voltron view disasm' Enter
-send -t 1 C-z 'voltron view reg -i' Enter
-send -t 2 C-z 'lldb' Enter
+send -t 1 C-z 'voltron view reg' Enter
+send -t 2 C-z 'gdb' Enter
 send -t 3 C-z 'voltron view stack' Enter
 send -t 4 C-z 'voltron view bp' Enter
 send -t 5 C-z 'voltron view bt' Enter

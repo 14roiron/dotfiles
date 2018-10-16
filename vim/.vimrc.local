@@ -14,3 +14,14 @@ nmap <leader>jA mA:Ack "<C-r>=expand("<cWORD>")<cr>"
 if executable('ag')"if ag available, it's quicker
   let g:ackprg = 'ag --vimgrep'
 endif
+
+
+" autolaunch nerdtree if no file are passed
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" nerdtree file color
+let g:NERDTreeFileExtensionHighlightFullName = 1
+let g:NERDTreeExactMatchHighlightFullName = 1
+let g:NERDTreePatternMatchHighlightFullName = 1
