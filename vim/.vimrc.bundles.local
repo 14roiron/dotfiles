@@ -8,6 +8,9 @@ Bundle "tiagofumo/vim-nerdtree-syntax-highlight"
 Bundle "Xuyuanp/nerdtree-git-plugin"
 Bundle "benmills/vimux"
 Bundle "jgdavey/vim-turbux"
+Bundle 'xuqix/h2cppx'
+"Bundle 'liuchengxu/vim-which-key'
+Bundle 'DoxygenToolkit.vim'
 
 " Bundle "ivanov/vim-ipython"
 " Bundle "vimux-pyutils"

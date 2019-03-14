@@ -31,12 +31,13 @@ cd ~/.dotfile
 stow vim tmux git zsh 
 
 curl https://raw.githubusercontent.com/14roiron/spf13-vim/3.0/bootstrap.sh -L | sh
-
+cd ~/.vim/bundle/h2cppx
+git checkout vim-port
 
 #create ssh key
-ssh-keygen -t rsa -b 4096 -C "yohann.roiron@mines-paristech.fr"
-eval "$(ssh-agent -s)"
-ssh-add -k ~/.ssh/id_rsa
-echo "key to put on github"
-cat ~/.ssh/id_rsa.pub
-echo '----'
+#ssh-keygen -t rsa -b 4096 -C "yohann.roiron@mines-paristech.fr"
+#eval "$(ssh-agent -s)"
+#ssh-add -k ~/.ssh/id_rsa
+#echo "key to put on github"
+#cat ~/.ssh/id_rsa.pub
+#echo '----'
