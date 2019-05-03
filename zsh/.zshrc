@@ -75,38 +75,44 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir root_indicator rbenv vcs vi_mode)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status load time)
 
 
+export LD_LIBRARY_PATH=/opt/intel/lib/intel64:/opt/intel/mkl/lib/intel64:${LD_LIBRARY_PATH}
 
 # The following lines were added by compinstall
 
 zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
 zstyle :compinstall filename '/Users/Yohann/.zshrc'
 
-
 # added by Anaconda3 2018.12 installer
 # >>> conda init >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$(CONDA_REPORT_ERRORS=false '/home/yroiron/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
+__conda_setup="$(CONDA_REPORT_ERRORS=false '/home/YRoiron/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
 if [ $? -eq 0 ]; then
     \eval "$__conda_setup"
 else
-    if [ -f "/home/yroiron/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/yroiron/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/YRoiron/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/YRoiron/anaconda3/etc/profile.d/conda.sh"
         CONDA_CHANGEPS1=false conda activate base
     else
-        \export PATH="/home/yroiron/anaconda3/bin:$PATH"
+        \export PATH="/home/YRoiron/anaconda3/bin:$PATH"
+
     fi
 fi
 unset __conda_setup
-# <<< conda init <<<
+
+
+
+
+
 autoload -Uz compinit
 compinit
+alias  uic="~/Qt/5.11.1/gcc_64/bin/uic"
 # End of lines added by compinstall
-alias python="/usr/bin/python2.7"
-source /opt/ros/melodic/setup.zsh
-source ~/Coding/catkin_ws2/devel/setup.zsh
-#export path=($HOME/Qt5.6.1/5.6/gcc_64/bin $path)
-#export path=($HOME/Qt5.6.1/5.6/gcc_64/lib/cmake $path)
-export LD_LIBRARY_PATH=/home/YRoiron/Qt/5.11.1/gcc_64/lib/:$LD_LIBRARY_PATH
+#source /opt/ros/kinetic/setup.zsh
+# source ~/Coding/catkin_ws2/devel/setup.zsh
+ export path=($HOME/Qt5.6.1/5.6/gcc_64/bin $path)
+ export path=($HOME/Qt5.6.1/5.6/gcc_64/lib/cmake $path)
+ export LD_LIBRARY_PATH=/home/YRoiron/Qt/5.11.1/gcc_64/lib/:$LD_LIBRARY_PATH
 export CMAKE_PREFIX_PATH="$HOME/Qt5.6.1/5.6/gcc_64/lib/cmake:$CMAKE_PREFIX_PATH"
+alias python="/usr/bin/python2.7"
 
 if [ "$TMUX" = "" ]; then tmux attach; fi
