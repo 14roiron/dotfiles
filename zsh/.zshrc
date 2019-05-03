@@ -98,11 +98,16 @@ else
     fi
 fi
 unset __conda_setup
+<<<<<<< Updated upstream
 
 
 
 
 
+=======
+conda deactivate
+# <<< conda init <<<
+>>>>>>> Stashed changes
 autoload -Uz compinit
 compinit
 alias  uic="~/Qt/5.11.1/gcc_64/bin/uic"

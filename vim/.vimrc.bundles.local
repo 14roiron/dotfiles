@@ -5,6 +5,7 @@ Bundle "sjl/vitality.vim"
 Bundle "tpope/vim-obsession.git"
 
 Bundle "vim-scripts/DoxygenToolkit.vim"
+Bundle 'xuqix/h2cppx'
 " Bundle "benmills/vimux"
 " Bundle "jgdavey/vim-turbux"
 

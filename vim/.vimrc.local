@@ -77,7 +77,14 @@ cabbrev delview <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'Delview' : 'delvie
 set autoread
 
 
+<<<<<<< Updated upstream
 let g:maplocalleader = "\<Space>"
 let g:mapleader = ','
 nnoremap <silent> <localleader>      :<c-u>WhichKey '<Space>'<CR>
 nnoremap <silent> <leader> :<c-u>WhichKey  ','<CR>
+=======
+
+
+let g:h2cppx_python_path = '/usr/bin/python'
+
+>>>>>>> Stashed changes
