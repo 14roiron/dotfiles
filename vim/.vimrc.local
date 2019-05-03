@@ -2,8 +2,7 @@ set wrap
 
 
 let g:spellfile_URL = 'http://ftp.vim.org/vim/runtime/spell'
-
-
+set tags=./tags;
 "vim ack binding
 " Parametres par defaut pour ack
 let g:ackprg="ack -H --nocolor --nogroup --column"
@@ -15,3 +14,60 @@ nmap <leader>jA mA:Ack "<C-r>=expand("<cWORD>")<cr>"
 if executable('ag')"if ag available, it's quicker
   let g:ackprg = 'ag --vimgrep'
 endif
+
+
+" autolaunch nerdtree if no file are passed
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" nerdtree file color
+let g:NERDTreeFileExtensionHighlightFullName = 1
+let g:NERDTreeExactMatchHighlightFullName = 1
+let g:NERDTreePatternMatchHighlightFullName = 1
+
+" c++ file geenration from header 
+" https://github.com/xuqix/h2cppx/tree/vim-port/h2cppx
+nmap <F3>  :H2cppx<ESC>
+nmap <F4>  :H2cppxLine<ESC>
+nmap <F3>p :CpH2cppx<ESC>
+nmap <F4>p :CpH2cppxLine<ESC>
+nmap <F5>  :H2cppxAuto<ESC>
+
+
+let g:DoxygenToolkit_briefTag_pre="@brief  "
+let g:DoxygenToolkit_paramTag_pre="@param "
+let g:DoxygenToolkit_returnTag="@returns   "
+let g:DoxygenToolkit_blockHeader="-------------------------------"
+let g:DoxygenToolkit_blockFooter="---------------------------------"
+let g:DoxygenToolkit_authorName="Yohann Roiron"
+let g:DoxygenToolkit_licenseTag="Confidential - Do not duplicate or distribute without written permission from Schlumberger"
+
+"delview to reset file preference
+" # Function to permanently delete views created by 'mkview'
+function! MyDeleteView()
+    let path = fnamemodify(bufname('%'),':p')
+    " vim's odd =~ escaping for /
+    let path = substitute(path, '=', '==', 'g')
+    if empty($HOME)
+    else
+        let path = substitute(path, '^'.$HOME, '\~', '')
+    endif
+    let path = substitute(path, '/', '=+', 'g') . '='
+    " view directory
+    let path = &viewdir.'/'.path
+    call delete(path)
+    echo "Deleted: ".path
+endfunction
+
+" # Command Delview (and it's abbreviation 'delview')
+command Delview call MyDeleteView()
+" Lower-case user commands: http://vim.wikia.com/wiki/Replace_a_builtin_command_using_cabbrev
+cabbrev delview <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'Delview' : 'delview')<CR>
+set autoread
+
+
+let g:maplocalleader = "\<Space>"
+let g:mapleader = ','
+nnoremap <silent> <localleader>      :<c-u>WhichKey '<Space>'<CR>
+nnoremap <silent> <leader> :<c-u>WhichKey  ','<CR>

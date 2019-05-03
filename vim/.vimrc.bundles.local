@@ -3,8 +3,15 @@ Bundle "christoomey/vim-tmux-navigator"
 Bundle "jeffkreeftmeijer/vim-numbertoggle.git"
 Bundle "sjl/vitality.vim"
 Bundle "tpope/vim-obsession.git"
-" Bundle "benmills/vimux"
-" Bundle "jgdavey/vim-turbux"
+Bundle "ryanoasis/vim-devicons"
+Bundle "tiagofumo/vim-nerdtree-syntax-highlight"
+Bundle "Xuyuanp/nerdtree-git-plugin"
+Bundle "benmills/vimux"
+Bundle "jgdavey/vim-turbux"
+Bundle 'xuqix/h2cppx'
+"Bundle 'liuchengxu/vim-which-key'
+Bundle 'DoxygenToolkit.vim'
+
 " Bundle "ivanov/vim-ipython"
 " Bundle "vimux-pyutils"
 " Bundle "julienr/vim-cellmode"
