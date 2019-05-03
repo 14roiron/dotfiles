@@ -103,8 +103,8 @@ autoload -Uz compinit
 compinit
 alias  uic="~/Qt/5.11.1/gcc_64/bin/uic"
 # End of lines added by compinstall
-source /opt/ros/kinetic/setup.zsh
- source ~/Coding/catkin_ws2/devel/setup.zsh
+#source /opt/ros/kinetic/setup.zsh
+# source ~/Coding/catkin_ws2/devel/setup.zsh
  export path=($HOME/Qt5.6.1/5.6/gcc_64/bin $path)
  export path=($HOME/Qt5.6.1/5.6/gcc_64/lib/cmake $path)
  export LD_LIBRARY_PATH=/home/YRoiron/Qt/5.11.1/gcc_64/lib/:$LD_LIBRARY_PATH
