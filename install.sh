@@ -16,21 +16,27 @@ python3 -m pip install --user powerline-status
 
 
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9kdd
+
+
+curl https://raw.githubusercontent.com/14roiron/spf13-vim/3.0/bootstrap.sh -L | sh
+
+
 rm ~/.zshrc
 cd ~
 rm .tmux.conf
 rm .vimrc
 rm .vimrc.local
 rm .zshrc
+rm .gdbinit
 
 git clone https://github.com/snare/voltron ~/.voltron
 cd ~/.voltron
 ./install.sh
 
-cd ~/.dotfile
+cd ~/.dotfiles
 stow vim tmux git zsh gdb valgrind git
 
-curl https://raw.githubusercontent.com/14roiron/spf13-vim/3.0/bootstrap.sh -L | sh
+
 cd ~/.vim/bundle/h2cppx
 git checkout vim-port
 
